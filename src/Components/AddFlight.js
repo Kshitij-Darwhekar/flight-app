@@ -21,21 +21,24 @@ export default class AddFlight extends Component{
     //     this.props.addFlight(this.state);
     // }
 
-    
+    onSave() {
+        // this.props.onSubmit(this.state);
+        this.props.addFlight(this.state);
+    }
 
 
     render() {
         return (
             <form>
                 <label>Code</label>
-                <input type="text"  value={this.state.code} onChange={this.handleInput} /> <br/>
+                <input type="number"   onChange={this.handleInput} /> <br/>
                 <label>Carrier</label>
-                <input type="text"  value={this.state.carrier} onChange={this.handleInput} /> <br/>
+                <input type="text"   onChange={this.handleInput} /> <br/>
                 <label>Source</label>
-                <input type="text"  value={this.state.source} onChange={this.handleInput} /> <br/>
+                <input type="text"   onChange={this.handleInput} /> <br/>
                 <label>Destination</label>
-                <input type="text"  value={this.state.destination} onChange={this.handleInput} /> <br/>
-                <button type="button" onClick={() => this.props.addFlight(this.state)}>Save</button>
+                <input type="text"   onChange={this.handleInput} /> <br/>
+                <button type="button" onClick={() => this.onSave}>Save</button>
             </form>
         );
     }

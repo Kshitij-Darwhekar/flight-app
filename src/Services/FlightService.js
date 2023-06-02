@@ -8,7 +8,7 @@ export default class FlightService {
         ]
     }
 
-    addFlight(flight) {
+    AddFlight(flight) {
         this.flights.push(flight);
     }
 
@@ -21,7 +21,7 @@ export default class FlightService {
     }
 
     deleteFlightByCode(code) {
-        var idx = this.flights.indexOf(this.findFlightByCode(code)));
+        var idx = this.flights.indexOf(this.findFlightByCode(code));
         this.flights.splice(idx,1);
     }
 

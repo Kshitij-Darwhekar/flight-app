@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import ListFlights from './Components/ListFlights';
 
 function App() {
   return (
     <div >
-      
+      <ListFlights/>
     </div>
   );
 }

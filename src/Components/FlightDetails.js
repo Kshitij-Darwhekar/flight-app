@@ -7,7 +7,7 @@ export default class FlightDetails extends Component {
 
     render() {
         return (
-            <table>
+            <table className="table table-bordered">
 
                     <tr><td>Code: {this.props.flight.code}</td></tr>
                     <tr><td>Carrier: {this.props.flight.carrier}</td></tr>
@@ -22,14 +22,15 @@ export default class FlightDetails extends Component {
     }
 
     onDelete = (code) => {
-        var ans = confirm("Are you sure you want to delete?");
+        const f = this.props.flight;
+        var ans = window.confirm("Are you sure you want to delete?");
         if(ans) {
-            this.props.deleteFlight(code);
+            this.props.onDelete(f.code);
         }
         else {
             alert("Flight not deleted");
         }
-        
+
     }
 
 }
