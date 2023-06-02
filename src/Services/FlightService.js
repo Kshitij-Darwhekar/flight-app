@@ -21,7 +21,7 @@ export default class FlightService {
     }
 
     deleteFlightByCode(code) {
-        var idx = this.flights.indexOf(this.flights.find(f => f.code === code));
+        var idx = this.flights.indexOf(this.findFlightByCode(code)));
         this.flights.splice(idx,1);
     }
 
